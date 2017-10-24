@@ -38,6 +38,7 @@ def main():
         print("Got", method, "request for", path)
         if path == "/toggle":
             led_pin.value(1-led_pin.value())
+			print("Toggle received.")
         while True:
             h = stream.readline().decode("ascii").strip()
             if h == "":
